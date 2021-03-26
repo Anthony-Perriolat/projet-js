@@ -19,4 +19,9 @@ $(function(){
     .always(function(){
         alert("Requête effectuée : Chuck Norris n'attend pas c'est le temps qu'il l'attend");
     });
+
+    // setting carrousel
+    $('jcarousel').jcarousel({
+
+    });
 });

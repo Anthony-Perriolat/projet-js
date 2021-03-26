@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <div><span class="TitleWebSite">Roadtrip</span>
+        <div>
+            <span class="TitleWebSite">Roadtrip</span>
         </div>
         
         <nav id="nav-dropdown">
@@ -19,14 +20,16 @@
         </nav>
     </header>
     <main>
-        <div>
-            <img src="img/index.jpeg" alt="voyage" id="image_travel1">
-            <img src="img/voyage1.jpeg" alt="voyage" id="image_travel2">
-            <img src="img/voyage2.jpeg" alt="voyage" id="image_travel3">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="img/index.jpeg" alt="voyage" id="image_travel1"></li>
+                <li><img src="img/voyage1.jpeg" alt="voyage" id="image_travel2"></li>
+                <li><img src="img/voyage2.jpeg" alt="voyage" id="image_travel3"></li>
+            </ul>
         </div>
         <section id="feed">
 
-    </section>
+        </section>
     </main>
     <footer>
     <p>retrouvez nos coordonnée ici : <a href="#">toto@gmail.com</a></p>
@@ -34,4 +37,5 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript" src="jquery.jcarousel.js"></script>
 </html>
