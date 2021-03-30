@@ -1,11 +1,11 @@
 $(document).ready(function () {
   let data = $.ajax({
-    url: 'http://api.icndb.com/jokes/random/5',
+    url: 'http://api.icndb.com/jokes/random/10',
     method: 'GET',
     dataType: 'json'
   }).done(function (reponsechuck) {
-    reponsechuck.value.forEach(element => $("section").append('<h1>Auteur : CHUCK NORRIS</h1>' + '<p>'
-      + element.joke + '</p>'
+    reponsechuck.value.forEach(element => $("section article").append('<div class="aricleUnitaire"> <h1>Auteur : CHUCK NORRIS</h1>' + '<p>'
+      + element.joke + '</p></div>'
     ));
     // OU 
     /* for (prop in  reponsechuck.value) {
@@ -17,9 +17,9 @@ $(document).ready(function () {
     });
 
     data;
-
+    // rafrechir article 
     $('#refresh').click(function () {
-      data;
+      document.location.reload();
     })
     
   // setting carrousel https://www.jqueryscript.net/slider/Responsive-Flexible-Mobile-Touch-Slider-Swiper.html
