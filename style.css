@@ -67,14 +67,14 @@ main{
 }
 section{
     width: 60%;
-
+    border: #fbfbfd 3px solid;
+    box-shadow: #bcbcc5 10px 10px 10px;
 }
 section article{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: #fbfbfd 3px solid;
-    box-shadow: #bcbcc5 10px 10px 10px;
+
     padding: 15px;
 }
 .aricleUnitaire{
@@ -88,6 +88,10 @@ section article{
     background-image: url('img/refresh\(1\).svg');
     background-color: cornflowerblue;
     border-radius: 8px;
+}
+#name{
+    width: 400px;
+    height: 100px;
 }
 
 footer{

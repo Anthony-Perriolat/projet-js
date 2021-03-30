@@ -1,10 +1,12 @@
+let idArt = 1;
+
 $(document).ready(function () {
   let data = $.ajax({
     url: 'http://api.icndb.com/jokes/random/10',
     method: 'GET',
     dataType: 'json'
   }).done(function (reponsechuck) {
-    reponsechuck.value.forEach(element => $("section article").append('<div class="aricleUnitaire"> <h1>Auteur : CHUCK NORRIS</h1>' + '<p>'
+    reponsechuck.value.forEach(element => $("#mesarticles").append('<div class="aricleUnitaire"> <h1>Auteur : CHUCK NORRIS</h1>' + '<p>'
       + element.joke + '</p></div>'
     ));
     // OU 
@@ -16,12 +18,12 @@ $(document).ready(function () {
       alert("La requete a échoué, Chuk Norris l'as cassé" + JSON.stringify(erreur));
     });
 
-    data;
-    // rafrechir article 
-    $('#refresh').click(function () {
-      document.location.reload();
-    })
-    
+  data;
+  // rafraîchir article 
+  $('#refresh').click(function () {
+    document.location.reload();
+  })
+
   // setting carrousel https://www.jqueryscript.net/slider/Responsive-Flexible-Mobile-Touch-Slider-Swiper.html
 
   var swiper = new Swiper('.swiper-container', {
@@ -42,12 +44,32 @@ $(document).ready(function () {
   });
   // menu deroulant 
   $('#buttonDropdown').click(function () {
-    menuDropdown()
+    menuDropdown();
   });
+  // poste d'aricle 
+  $('#send').click(function () {
+    sendForm();
+ });
 
-
-
+ // ---- fin $ ----
 });
+ // envoie du formulaire 
+
+ function sendForm() {
+  let title = $("#title").val();
+  let content = $("#articleContent").val(); 
+  $('#mesarticles').append(
+  '<article id="art'+idArt+'">\
+  <button onclick="deleteArticle('+idArt+')">-</button>\
+  <h4>' + title + '</h4>\
+  <p>' + content + '</p>\
+  </article>')
+  idArt++
+  };
+
+  function deleteArticle(idArt) {
+    $('#art'+idArt).remove()
+  }
 
 let isOpen = false;
 function menuDropdown() {
