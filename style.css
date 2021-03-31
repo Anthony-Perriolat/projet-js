@@ -75,7 +75,7 @@ section{
     flex-wrap: wrap;
     margin: auto;
 }
-section .aricleUnitaire{
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -83,12 +83,17 @@ section .aricleUnitaire{
 }
 .aricleUnitaire{
     border: black 3px solid;
-    width: 33.333333%;
+    width: 24%;
     height: 300px;
 }
+#mesphotos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
 .photoUnitaire {
-    border: black 3px solid;
-    width: 33.333333%;
+    border: black 1px solid;
+    width: 24%;
 }
 .photoUnitaire img {
     width: 100%;
