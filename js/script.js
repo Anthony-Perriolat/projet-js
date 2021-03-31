@@ -32,7 +32,6 @@ $(document).ready(function () {
       type: 'progressbar',
     },
     navigation: {
-
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
@@ -50,6 +49,7 @@ $(document).ready(function () {
   $('#send').click(function () {
     sendForm();
  });
+printImg();
 
  // ---- fin $ ----
 });
@@ -59,7 +59,7 @@ $(document).ready(function () {
   let title = $("#title").val();
   let content = $("#articleContent").val(); 
   $('#mesarticles').append(
-  '<article id="art'+idArt+'">\
+  '<article class="aricleUnitaire"id="art'+idArt+'">\
   <button onclick="deleteArticle('+idArt+')">-</button>\
   <h4>' + title + '</h4>\
   <p>' + content + '</p>\
@@ -80,4 +80,16 @@ function menuDropdown() {
     document.getElementById('myDropdown').style.display = "flex";
   }
   isOpen = !isOpen;
+}
+
+// Galerie
+let i =1;
+function printImg() {
+  while(i<=8) {
+    $("#mesphotos").append(
+      '<article class="photoUnitaire">\
+      <img src="img/galery/img'+ i +'.jpg">\
+      </article>')
+      i++;
+  }
 }

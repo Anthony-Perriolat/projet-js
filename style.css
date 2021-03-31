@@ -70,16 +70,29 @@ section{
     border: #fbfbfd 3px solid;
     box-shadow: #bcbcc5 10px 10px 10px;
 }
-section article{
+#mesarticles{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+section .aricleUnitaire{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    padding: 15px;
+    margin: 15px;
 }
 .aricleUnitaire{
     border: black 3px solid;
     width: 33.333333%;
+    height: 300px;
+}
+.photoUnitaire {
+    border: black 3px solid;
+    width: 33.333333%;
+}
+.photoUnitaire img {
+    width: 100%;
+    height: 300px;
 }
 
 #refresh{
