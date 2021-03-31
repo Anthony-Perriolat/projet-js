@@ -109,9 +109,12 @@ function changeview() {
 function sendImg() {
   let content = $("#urlImg").val(); 
   $('#mesphotos').append(
-  '<article class="photoUnitaire"id="img'+i+'">\
+  '<article class="photoUnitaire" id="img'+i+'">\
   <button onclick="deleteImg('+i+')">-</button>\
   <img src="' + content + '"/>\
   </article>')
   i++
   };
+  function deleteImg(i) {
+    $('#img'+i).remove()
+  }
