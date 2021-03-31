@@ -94,7 +94,7 @@ function printImg() {
       i++;
   }
 }
-let etat = false;
+let etat = true;
 function changeview() {
   if(etat){
     $('#mesphotos').css('flex-direction','column')
@@ -105,3 +105,13 @@ function changeview() {
   etat = !etat;
 }
 
+
+function sendImg() {
+  let content = $("#urlImg").val(); 
+  $('#mesphotos').append(
+  '<article class="photoUnitaire"id="img'+i+'">\
+  <button onclick="deleteImg('+i+')">-</button>\
+  <img src="' + content + '"/>\
+  </article>')
+  i++
+  };
