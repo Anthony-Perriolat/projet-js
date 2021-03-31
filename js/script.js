@@ -51,6 +51,7 @@ $(document).ready(function () {
  });
 printImg();
 
+
  // ---- fin $ ----
 });
  // envoie du formulaire 
@@ -93,3 +94,14 @@ function printImg() {
       i++;
   }
 }
+let etat = false;
+function changeview() {
+  if(etat){
+    $('#mesphotos').css('flex-direction','column')
+  }
+  else {
+    $('#mesphotos').css('flex-direction','row')
+  }
+  etat = !etat;
+}
+
