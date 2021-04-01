@@ -143,7 +143,6 @@ Position must be relative!
 }
 
 /* jeux */ 
-
 #game{
     display: flex;
     flex-direction: column;
@@ -153,8 +152,8 @@ Position must be relative!
 h2{
     text-align: center;
 }
-.game{
-    display: flex;
+.game1{
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
