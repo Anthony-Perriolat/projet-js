@@ -51,6 +51,7 @@ $(document).ready(function () {
  });
 printImg();
 
+
  // ---- fin $ ----
 });
  // envoie du formulaire 
@@ -93,3 +94,27 @@ function printImg() {
       i++;
   }
 }
+let etat = true;
+function changeview() {
+  if(etat){
+    $('#mesphotos').css('flex-direction','column')
+  }
+  else {
+    $('#mesphotos').css('flex-direction','row')
+  }
+  etat = !etat;
+}
+
+
+function sendImg() {
+  let content = $("#urlImg").val(); 
+  $('#mesphotos').append(
+  '<article class="photoUnitaire" id="img'+i+'">\
+  <button onclick="deleteImg('+i+')">-</button>\
+  <img src="' + content + '"/>\
+  </article>')
+  i++
+  };
+  function deleteImg(i) {
+    $('#img'+i).remove()
+  }

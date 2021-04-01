@@ -141,3 +141,43 @@ Position must be relative!
     width: 100%;
     height: 100%;
 }
+
+/* jeux */ 
+
+#game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black 2px solid;
+}
+#paper{
+    width: 150px;
+    height: 150px;
+    background-image: url('img/feuille.jpg');
+    background-size: cover;
+}
+#rock{
+    width: 150px;
+    height: 150px;
+    background-image: url('img/rock.jpg');
+    background-size: cover;
+}
+#scissors{
+    width: 150px;
+    height: 150px;
+    background-image: url('img/ciseaux.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

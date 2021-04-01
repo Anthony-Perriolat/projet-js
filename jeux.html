@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Gallery</title>
 </head>
+
 <body>
-    <div id="game"></div>
+    <header>
+        <div class="pt1H">
+            <span class="TitleWebSite">Roadtrip</span>
+            <img class="logo" src="img/departures.svg" alt="Logo">
+        </div>
+
+        <nav id="menu">
+            <button id="buttonDropdown">Menu</button>
+            <div id="myDropdown">
+                <a href="index.html">Acceuil</a>
+                <a href="gallery.html">Galerie</a>
+                <a href="jeux.html">Jeux</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="game">
+            <div class="chooseGame">
+                <article class="game1">
+                    <h2>Faites votre choix</h2>
+                    <div>
+                        <button class="toto" value="paper" id="paper"></button>
+                        <button class="toto" value="rock" id="rock"></button>
+                        <button class="toto" value="scissors" id="scissors"></button>
+                    </div>
+                    <div id="result">
+
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>retrouvez nos coordonnées ici : <a href="#">toto@gmail.com</a></p>
+    </footer>
 </body>
-<footer>
-    <p>retrouvez nos coordonnée ici : <a href="#">toto@gmail.com</a></p>
-</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script src="jeux1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </html>
