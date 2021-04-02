@@ -1,7 +1,7 @@
 let idArt = 1;
 
 $(document).ready(function () {
-  let data = $.ajax({
+  $.ajax({
     url: 'http://api.icndb.com/jokes/random/10',
     method: 'GET',
     dataType: 'json'
@@ -18,7 +18,6 @@ $(document).ready(function () {
       alert("La requete a échoué, Chuk Norris l'as cassé" + JSON.stringify(erreur));
     });
 
-  data;
   // rafraîchir article 
   $('#refresh').click(function () {
     document.location.reload();
@@ -29,7 +28,6 @@ $(document).ready(function () {
   var swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
-      type: 'progressbar',
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -96,13 +94,15 @@ function printImg() {
 }
 let etat = true;
 function changeview() {
-  if(etat){
+  //$('#mesphotos').css('flex-direction', $(this).data('direction'));
+  //$(this).data('direction', );
+  /*if(etat){
     $('#mesphotos').css('flex-direction','column')
   }
   else {
     $('#mesphotos').css('flex-direction','row')
   }
-  etat = !etat;
+  etat = !etat;*/
 }
 
 
